@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/index/main",
+    "pages/me/main",
+    "pages/opinion/main",
+    "pages/instruction/main"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#EA5149",
+    "navigationBarTitleText": "真自律", 
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor":  "#EA5149",
+    "list": [{
+      "text": "首页",
+      "pagePath": "pages/index/main"
+
+    },
+    {
+      "text": "我的",
+      "pagePath": "pages/me/main"
+ 
+    }]
+  }
+
+}
