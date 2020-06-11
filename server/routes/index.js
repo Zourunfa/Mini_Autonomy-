@@ -35,5 +35,9 @@ router.post('/message', controllers.message.post)
 // 处理提交的反馈信息
 // router.post('/feedback',controllers.feedback)
 router.post('/createopinion', controllers.createopinion) 
+router.post('/createrecord', controllers.createrecord)
+router.get('/getmark', controllers.getmark)
+router.post('/resetmark',controllers.resetmark)
+router.post('/recall',controllers.recall)
 
 module.exports = router
