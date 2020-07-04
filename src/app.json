@@ -3,7 +3,8 @@
     "pages/index/main",
     "pages/me/main",
     "pages/opinion/main",
-    "pages/instruction/main"
+    "pages/instruction/main",
+    "pages/record/main"
 
   ],
   "window": {
@@ -18,6 +19,11 @@
       "text": "首页",
       "pagePath": "pages/index/main"
 
+    },
+    {
+      "text": "记录",
+      "pagePath": "pages/record/main"
+ 
     },
     {
       "text": "我的",

@@ -77,6 +77,13 @@
 					"id": -1,
 					"name": "pages/index/main",
 					"pathName": "pages/index/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/record/main",
+					"pathName": "pages/record/main",
 					"scene": null
 				}
 			]

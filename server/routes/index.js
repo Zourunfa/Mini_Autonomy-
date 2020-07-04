@@ -39,5 +39,6 @@ router.post('/createrecord', controllers.createrecord)
 router.get('/getmark', controllers.getmark)
 router.post('/resetmark',controllers.resetmark)
 router.post('/recall',controllers.recall)
+router.get('/getrecords',controllers.getrecords)
 
 module.exports = router
