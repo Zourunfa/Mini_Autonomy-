@@ -2,9 +2,9 @@ const {mysql} = require('../qcloud')
 
 module.exports = async (ctx) =>{
    
-    const {openid} = ctx.request.query
+    const {openid,page} = ctx.request.query
     try {
-        const records  = await mysql("records").where('openid',openid).orderBy("id", "desc")
+        const records  = await mysql("records").where('openid',openid).orderBy("id", "desc").limit(15).offset(Number(page)*15)
         ctx.state.data ={
             records
         }

@@ -40,5 +40,7 @@ router.get('/getmark', controllers.getmark)
 router.post('/resetmark',controllers.resetmark)
 router.post('/recall',controllers.recall)
 router.get('/getrecords',controllers.getrecords)
+// router.post('/updatenote',controllers.updatenote)
+router.post('/updatenote',controllers.updatenote)
 
 module.exports = router

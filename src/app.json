@@ -9,8 +9,8 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#EA5149",
-    "navigationBarTitleText": "真自律", 
+    "navigationBarBackgroundColor": "#32ff7e",
+    "navigationBarTitleText": "绿源科技", 
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -21,14 +21,17 @@
 
     },
     {
-      "text": "记录",
-      "pagePath": "pages/record/main"
+      "text": "智能控制",
+      "pagePath": "pages/record/main",
+      "iconPath": "static/images/inteliControl.png",
+      "selectedIconPath": "static/images/inteliControl-active.png"
  
     },
     {
       "text": "我的",
-      "pagePath": "pages/me/main"
- 
+      "pagePath": "pages/me/main",
+      "iconPath": "static/images/me.png",
+      "selectedIconPath": "static/images/me-active.png"
     }]
   }
 

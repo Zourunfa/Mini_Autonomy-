@@ -13,32 +13,75 @@
           <div class="mark">
             <label  v-if="record.mark>=0">&nbsp;{{record.mark}}</label>
             <label  v-else>{{record.mark}}</label>
-          </div>
-          <div class="net">
+          </div> 
+          <div class="net" @click="changeShow()">
             <label v-if="note">{{note}}</label>
             <label  v-else class="no-note">点击添加</label>
           </div>
 
             <label v-if="show_input">
-              取消
+              <div class="image"  @click="changeShow()"  ><image src="/static/images/quxiao.png" class="img" @click="cancel()"></image></div>
+            </label>
+            <label v-else >
+              <div class="image" @click="changeShow()"><image :src="note?src:''" class="img"></image></div> 
             </label>
         </div>
       </div>
+
+      <div class="hide" v-if="show_input">
+        <button class="btn" v-if="record.note" @click="updateNote()">
+          修改
+        </button>
+
+        <button v-else class="btn"  @click="updateNote()">
+          添加
+        </button>
+
+        <input v-model="note" class="input" maxlength="10" placeholder="最多输入10个字">
+      </div>
+
     </div>
 </template>
 
 <script>
 import {formatTime} from  "../utils/index.js"
+import {post,showMadel} from "@/util"
 export default {
         props:['record'],
         data(){
           return {
                create_time:formatTime(new Date(this.record.create_time)),
-               showInput:false,
+               show_input:false,
                note:this.record.note,
-               src:"/static/images/banji.png"
+               src:"/static/images/bianji.png"
           }
-        }
+        },
+        methods: {
+          changeShow(){
+            this.show_input = !this.show_input
+          },
+          async updateNote(){
+            const data = {
+              id:this.record.id,  
+              note:this.note
+            }
+            try {
+              const res = await post('/weapp/updatenote',data)
+              console.log("从后端传过来的数据"+res);
+              this.show_input = false
+
+              
+            } catch (error) {
+              showMadal("请求失败","请重新提交")
+              console.log("错误原因",error);
+              
+            }
+          },
+          cancel(){
+            this.show_input = !this.show_input
+            this.note = this.record.note
+          }
+        },
 }
 </script>
 
@@ -89,6 +132,7 @@ export default {
       padding-top:1px;
       float: right;
       margin-left: 5px;
+      // width: 20px;
     }
   }
   .hide{

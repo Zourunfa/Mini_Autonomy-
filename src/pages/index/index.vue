@@ -8,25 +8,6 @@
     <!-- <Loginwindow></Loginwindow> -->
     <!-- </div>  -->
     <!-- <button open-type="getUserInfo" lang="zh_CN" class="btn" @getuserinfo="login">授权登录</button> -->
-    <div class="show">
-      <div class="button">
-        <div class="btn1 right" @click="recall()">撤销</div>
-        <div class="btn0" @click="reset()">清零</div>
-      </div>
-
-      <div class="mark-text">当前分数</div>
-      <div class="mark">{{mark}}</div>
-    </div>
-
-    <div class="row">
-      <div class="right button" @click="addMark(1)">+ 1</div>
-      <div class="left button" @click="addMark(-1)">- 1</div>
-    </div>
-
-    <div class="row">
-      <div class="right button" @click="addMark(5)">+ 5</div>
-      <div class="left button" @click="addMark(-5)">- 5</div>
-    </div>
   </div>
 </template>
     

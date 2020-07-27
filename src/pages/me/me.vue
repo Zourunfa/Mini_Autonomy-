@@ -137,7 +137,7 @@ export default {
 .top {
   height: 80px;
   width: 100%;
-  background: #ea5149;
+  background: #32ff7e;
   padding-top: 30px;
   display: block;
   .userinfo {
